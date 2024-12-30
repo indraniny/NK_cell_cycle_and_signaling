@@ -1,0 +1,43 @@
+FCS Filename	Conditions	Doses	Doses Numeric Value	Doses Units	Timepoints	Individuals	Plate Shape	Sample Type	Plate Row	Plate Column	Plate	FCS File Category
+debarcoded_IL2_IgG_16min_CD56bright.fcs	IL-2	IgG			16	-	-	-	-	-	Plate 1	Experiment Files
+debarcoded_IL2_IgG_16min_CD56dim.fcs	IL-2	IgG			16	-	-	-	-	-	Plate 1	Experiment Files
+debarcoded_IL2_IgG_264min_CD56bright.fcs	IL-2	IgG			264	-	-	-	-	-	Plate 1	Experiment Files
+debarcoded_IL2_IgG_264min_CD56dim.fcs	IL-2	IgG			264	-	-	-	-	-	Plate 1	Experiment Files
+debarcoded_IL2_IgG_2min-(1)_CD56bright.fcs	-	-	-	-	-	-	-	-	-	-	Plate 1	Experiment Files
+debarcoded_IL2_IgG_2min-(1)_CD56dim.fcs	-	-	-	-	-	-	-	-	-	-	Plate 1	Experiment Files
+debarcoded_IL2_IgG_2min_CD56bright.fcs	IL-2	IgG			2	-	-	-	-	-	Plate 1	Experiment Files
+debarcoded_IL2_IgG_2min_CD56dim.fcs	IL-2	IgG			2	-	-	-	-	-	Plate 1	Experiment Files
+debarcoded_IL2_IgG_32min_CD56bright.fcs	IL-2	IgG			32	-	-	-	-	-	Plate 1	Experiment Files
+debarcoded_IL2_IgG_32min_CD56dim.fcs	IL-2	IgG			32	-	-	-	-	-	Plate 1	Experiment Files
+debarcoded_IL2_IgG_4min_CD56bright.fcs	IL-2	IgG			4	-	-	-	-	-	Plate 1	Experiment Files
+debarcoded_IL2_IgG_4min_CD56dim.fcs	IL-2	IgG			4	-	-	-	-	-	Plate 1	Experiment Files
+debarcoded_IL2_IgG_64min_CD56bright.fcs	IL-2	IgG			64	-	-	-	-	-	Plate 1	Experiment Files
+debarcoded_IL2_IgG_64min_CD56dim.fcs	IL-2	IgG			64	-	-	-	-	-	Plate 1	Experiment Files
+debarcoded_IL2_IgG_8min_CD56bright.fcs	IL-2	IgG			8	-	-	-	-	-	Plate 1	Experiment Files
+debarcoded_IL2_IgG_8min_CD56dim.fcs	IL-2	IgG			8	-	-	-	-	-	Plate 1	Experiment Files
+debarcoded_IL2_NKG2D_16min_CD56bright.fcs	IL-2	NKG2D			16	-	-	-	-	-	Plate 1	Experiment Files
+debarcoded_IL2_NKG2D_16min_CD56dim.fcs	IL-2	NKG2D			16	-	-	-	-	-	Plate 1	Experiment Files
+debarcoded_IL2_NKG2D_264min_CD56bright.fcs	IL-2	NKG2D			264	-	-	-	-	-	Plate 1	Experiment Files
+debarcoded_IL2_NKG2D_264min_CD56dim.fcs	IL-2	NKG2D			264	-	-	-	-	-	Plate 1	Experiment Files
+debarcoded_IL2_NKG2D_2min_CD56bright.fcs	IL-2	NKG2D			2	-	-	-	-	-	Plate 1	Experiment Files
+debarcoded_IL2_NKG2D_2min_CD56dim.fcs	IL-2	NKG2D			2	-	-	-	-	-	Plate 1	Experiment Files
+debarcoded_IL2_NKG2D_32min_CD56bright.fcs	IL-2	NKG2D			32	-	-	-	-	-	Plate 1	Experiment Files
+debarcoded_IL2_NKG2D_32min_CD56dim.fcs	IL-2	NKG2D			32	-	-	-	-	-	Plate 1	Experiment Files
+debarcoded_IL2_NKG2D_4min_CD56bright.fcs	IL-2	NKG2D			4	-	-	-	-	-	Plate 1	Experiment Files
+debarcoded_IL2_NKG2D_4min_CD56dim.fcs	IL-2	NKG2D			4	-	-	-	-	-	Plate 1	Experiment Files
+debarcoded_IL2_NKG2D_64min_CD56bright.fcs	IL-2	NKG2D			64	-	-	-	-	-	Plate 1	Experiment Files
+debarcoded_IL2_NKG2D_64min_CD56dim.fcs	IL-2	NKG2D			64	-	-	-	-	-	Plate 1	Experiment Files
+debarcoded_IL2_NKG2D_8min_CD56bright.fcs	IL-2	NKG2D			8	-	-	-	-	-	Plate 1	Experiment Files
+debarcoded_IL2_NKG2D_8min_CD56dim.fcs	IL-2	NKG2D			8	-	-	-	-	-	Plate 1	Experiment Files
+debarcoded_IL2_PBS-(1)_CD56bright.fcs	IL-2	NKG2D			0	-	-	-	-	-	Plate 1	Experiment Files
+debarcoded_IL2_PBS-(1)_CD56dim.fcs	IL-2	NKG2D			0	-	-	-	-	-	Plate 1	Experiment Files
+debarcoded_IL2_PBS_CD56bright.fcs	IL-2	IgG			0	-	-	-	-	-	Plate 1	Experiment Files
+debarcoded_IL2_PBS_CD56dim.fcs	IL-2	IgG			0	-	-	-	-	-	Plate 1	Experiment Files
+debarcoded_IL2_PMA_iono_16min-(1)_CD56bright.fcs	IL-2	NKG2D			PMA	-	-	-	-	-	Plate 1	Experiment Files
+debarcoded_IL2_PMA_iono_16min-(1)_CD56dim.fcs	IL-2	NKG2D			PMA	-	-	-	-	-	Plate 1	Experiment Files
+debarcoded_IL2_PMA_iono_16min_CD56bright.fcs	IL-2	IgG			PMA	-	-	-	-	-	Plate 1	Experiment Files
+debarcoded_IL2_PMA_iono_16min_CD56dim.fcs	IL-2	IgG			PMA	-	-	-	-	-	Plate 1	Experiment Files
+debarcoded_NK_PBS_CD56bright.fcs	No cytokines	No IL-2			0	-	-	-	-	-	Plate 1	Experiment Files
+debarcoded_NK_PBS_CD56dim.fcs	No cytokines	No IL-2			0	-	-	-	-	-	Plate 1	Experiment Files
+debarcoded_NK_PMA_iono_16min_CD56bright.fcs	No cytokines	No IL-2			PMA	-	-	-	-	-	Plate 1	Experiment Files
+debarcoded_NK_PMA_iono_16min_CD56dim.fcs	No cytokines	No IL-2			PMA	-	-	-	-	-	Plate 1	Experiment Files
