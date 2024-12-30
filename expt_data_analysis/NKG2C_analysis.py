@@ -1,3 +1,11 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Dec 15 11:39:20 2024
+
+@author: ixn004
+"""
+
 
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
@@ -52,6 +60,10 @@ def load_fcs_as_matrix(filename):
       param_names.append(metadata.get(b"$P%dS"%(i+1),metadata[b"$P%dN"%(i+1)]))
  data = np.array(data)
  
+ #This part is added to prune the unwanted data ( The data had data1 and data 2 are same, for example barcode at column 53) Nov 5,24
+ param_names=param_names[3:49]
+ data=data[:,3:49]
+ 
  
  
  #do the transformation of the raw data needed
@@ -63,7 +75,7 @@ def load_fcs_as_matrix(filename):
  
 ##analyse CD107 high population with gating for G1, S and G2
 def analyze_protein_variation(path):
-    good_idx = [0,1,2,3,6,7,8,9,10,12,13,14,15,17,20,21,22,23,24,25,26,27,28,35,38,39,40,41,42,43,44,45,46]
+  
     time_strings = ['8','32','64','128','256']
     stage_strings = ['G1','S','G2']
     
@@ -95,7 +107,7 @@ def analyze_protein_variation(path):
                 #---------------------------------#
               
                 a[protein_idx,time_idx,i],b[protein_idx,time_idx,i],c[protein_idx,time_idx,i] = check_increase(data1[:,protein_idx:protein_idx+1],data2[:,protein_idx:protein_idx+1])
-    return a,b,c,name_list, good_idx
+    return a,b,c,name_list
 # Remember, "a" is "has decrease", "b" is "has increase", and "c" is a raw comparison (no 
 
 
@@ -282,17 +294,12 @@ def give_names(test,names,protein_idx):
 # two succesive increases (test1) has index "0", an increase followed by "no change" (test2) 
 # has index "1", etc.  "out" is the output, and it's given as an output argument.  The written
 # file indicates which proteins belong to each category of trends.
-def write_class_file(a,b,c,names,protein_idx,filename):
+def write_class_file(a,b,c,names):
     tests = do_tests(a,b,c)
     print(len(tests)) #9
     out = np.zeros((len(tests[0][:,0]),len(tests[0][0,:])))
     for idx,test in enumerate(tests):
         out[test] = idx
-    with open(filename,'w',newline='\n') as file:
-        wr = csv.writer(file)
-        for idx,test in enumerate(tests):
-            res = give_names(test.T,names,good_idx)
-            wr.writerow(res)
     return out
 
     
@@ -354,12 +361,12 @@ if __name__=='__main__':
 
 
     # a is a two dimesional array for all proteins, 1st column represents if proteins decrease between G1 and S and 2nd column represents the protein increase between S and G2 stages
-    a,b,c,name_list, good_idx=analyze_protein_variation(path)
+    a,b,c,name_list=analyze_protein_variation(path)
 
     #print(a)
     
     #writing the file for colormap
-    test_idx = write_class_file(a,b,c,name_list,good_idx,'ignore.csv')#something wrong with the file printing here
+    test_idx = write_class_file(a,b,c,name_list)
     
     print(name_list)
     # # Save to CSV file
@@ -367,17 +374,7 @@ if __name__=='__main__':
 
     print(test_idx)
     print(test_idx.shape)
-    # # x=c
-    # print(f"a= ",a)
-    # print(f"b= ",b)
-    # print(f"c= ",c)
-    #print(f"name_list= {name_list}")
-    # print(f"protein_idx=  ", protein_idx)
-    
-    # print(a.shape, b.shape, c.shape)
-    # print(type(a),type(b),type(c))
-    # #print(len(a))
-    
+
     
     # Ensure name_list is a list of strings
     name_list_str = [name.decode('ascii') if isinstance(name, bytes) else name for name in name_list]
@@ -392,28 +389,10 @@ if __name__=='__main__':
     #df_test_idx.to_csv('greg_umap_colormap_logtransformed_aug26.csv', index=False) #skip the previous file and look at the file now
     df_test_idx.to_csv('NKG2C_colormap_logtransformed_Sept20.csv', index=False) #skip the previous file and look at the file now
 
-    
-    # plot_protein(b'CD45',path)
-    # plot_protein(b'CD57',path)
-    # #plot_protein(b'pCreb',6)
-    # plot_protein(b'pCreb',path)
-    # #plot_protein(b'CD107a',6)
-    # plot_protein(b'CD107a',path)
-    # #plot_protein(b'pNFkB',6)
-    # plot_protein(b'pNFkB',path)
-    # #plot_protein(b'Ki67',6)
-    # plot_protein(b'Ki67',path)
-    # plot_protein(b'CD16',path)
-    
-    # print(name_list)
-    # print(len(name_list))
-    
-    # #out=write_class_file(a,b,c,name_list,protein_idx,'color_map.csv')
-    
-    
+ 
     # Specify the protein name you are interested in
     #protein_name = b'CD16'
-    protein_name = b'pS6'
+    protein_name = b'CD107a'
     timepoint=2 #(8 ,32, 64,128, 256)
     cell_cycle_stage=1 #{g1-S, S-G2]}
     
