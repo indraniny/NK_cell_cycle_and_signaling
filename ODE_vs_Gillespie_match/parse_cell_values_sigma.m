@@ -32,6 +32,21 @@ end
 protein_levels
 cell_levels
 
+% Append cell_levels to a text file
+%fileID = fopen('cell_levels_S10x.txt', 'a');  % Open file in append mode ('a')
+fileID = fopen('cell_levels_constant_rate.txt', 'a');  % Open file in append mode ('a')
+if fileID == -1
+    error('File could not be opened. Please check file permissions.');
+end
+
+% Append the cell levels for this call
+for i = 1:n_states-1
+    fprintf(fileID, '%.4f\t', cell_levels(i));  % Write each cell level
+end
+ fprintf(fileID, '%.4f\n', cell_levels(n_states));  % Write each cell level
+fclose(fileID);  % Close the file
+
+
 for i=1:n_states
     protein_levels_in_state = rearranged_cells(rearranged_cells(:,end-n_states-1+i)==1,1:n_proteins);
     proteins_dist_state{i}= protein_levels_in_state;

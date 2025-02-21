@@ -7,6 +7,7 @@ load('A_levels_ode.mat', 'A_levels_ode');
 load('A_phosph_levels_ode.mat', 'A_phosph_levels_ode');
 load('times.mat','times');
 %times=0.05:0.3:50;
+%times=0.05:0.3:0.6;
 length(times)
 % Loop over cells_at_t from 1 to 10
 for k = 1:length(times)
@@ -74,13 +75,13 @@ plot(times, protein_G2_levels(:,2), 'DisplayName', 'Protein G2', 'LineWidth', 2)
 plot(times, protein_M_levels(:,2), 'DisplayName', 'Protein M', 'LineWidth', 2)
 
 hold on;
-
+lw=6
 % Plot ODE protein levels with increased line thickness and dotted lines
-plot(times, A_phosph_levels_ode(1,:),'b-', 'DisplayName', 'Protein G1-ODE', 'LineStyle', ':', 'LineWidth', 2)
+plot(times, A_phosph_levels_ode(1,:),'b-', 'DisplayName', 'Protein G1-ODE', 'LineStyle', ':', 'LineWidth', lw)
 hold on
-plot(times, A_phosph_levels_ode(2,:), 'DisplayName', 'Protein S-ODE', 'LineStyle', ':', 'LineWidth', 2)
-plot(times, A_phosph_levels_ode(3,:), 'DisplayName', 'Protein G2-ODE', 'LineStyle', ':', 'LineWidth', 2)
-plot(times, A_phosph_levels_ode(4,:), 'DisplayName', 'Protein M-ODE', 'LineStyle', ':', 'LineWidth', 2)
+plot(times, A_phosph_levels_ode(2,:), 'DisplayName', 'Protein S-ODE', 'LineStyle', ':', 'LineWidth', lw)
+plot(times, A_phosph_levels_ode(3,:), 'DisplayName', 'Protein G2-ODE', 'LineStyle', ':', 'LineWidth', lw)
+plot(times, A_phosph_levels_ode(4,:), 'DisplayName', 'Protein M-ODE', 'LineStyle', ':', 'LineWidth', lw)
 
 % Add a title
 title('Gillespie vs. ODE: a* Across Cell Cycle Stages')

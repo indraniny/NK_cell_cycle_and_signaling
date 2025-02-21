@@ -32,7 +32,8 @@ for z=1
     
 
     %cycle=[.1 .1 .1 .1]; % 14 h, 10 h, 5 h, 1.42 h
-    cycle=[.15 .1 .45 .5]; % 14 h, 10 h, 5 h, 1.42 h
+    %cycle=[.15 .1 .45 .5]; % 14 h, 10 h, 5 h, 1.42 h
+    cycle=[0.07 0.1 0.2 0.7]; 
     disp('Cell cycle transition rates in hours (G1->S, S->G2, G2->M, M-> G1) :')
     disp(1./cycle)
  
@@ -97,7 +98,8 @@ for z=1
      rxn_rates(2,:)=1.0 %dephosph rate
      rxn_rates(3,:)=1.0 %synthesis rate
      rxn_rates(4:5,:)=0.01 %degradation rate
-     rxn_rates(1,2)=10.0 %phosphorylation rates
+     
+     %rxn_rates(1,2)=10.0 %phosphorylation rates
      
 
 
