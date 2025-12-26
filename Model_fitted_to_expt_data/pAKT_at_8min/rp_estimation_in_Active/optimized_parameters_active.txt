@@ -1,0 +1,4 @@
+Optimized parameters:
+kcat   = 416.000000
+kcat_S = 534.000000
+kcat_G2= 1822.000000
