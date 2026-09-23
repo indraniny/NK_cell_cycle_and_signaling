@@ -26,5 +26,5 @@ This folder contains sensitivity analyses examining how variations in the averag
 
 ## Data Availability
 
-The CyTOF data used in the analyses, after gating into cell-cycle stages, are publicly available in the `expt_data_analysis/data` folder. The raw flow cytometry data are publicly available in the `raw_data` folder.
+The CyTOF data used in the analyses, after gating into cell-cycle stages, are available in the `expt_data_analysis/data` folder. The raw flow cytometry data are available in the `raw_data` folder.
 
