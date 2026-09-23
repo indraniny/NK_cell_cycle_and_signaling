@@ -22,3 +22,9 @@ In this folder, we fitted observed pS6 and pAkt datasets using our in-silico non
 
 ### Gillespie_sensitivity_analysis_simulation
 This folder contains sensitivity analyses examining how variations in the average abundance of a protein respond to a range of signaling parameters in our non-linear in-silico model (Figure 4A). Parameter ranges are discussed in the Supplementary Materials.
+
+
+## Data Availability
+
+The CyTOF data used in the analyses, after gating into cell-cycle stages, are publicly available in the `expt_data_analysis/data` folder. The raw flow cytometry data are publicly available in the `raw_data` folder.
+
